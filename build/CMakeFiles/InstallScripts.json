@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ferpen/project/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

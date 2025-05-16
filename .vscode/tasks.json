@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: g++ arquivo de build ativo",
+            "type": "shell",
+            "command": "/bin/bash",
+            "args": [
+                "-c",
+                "g++ -fdiagnostics-color=always -g -I${workspaceFolder}/header ${workspaceFolder}/source/*.cpp -o ${workspaceFolder}/out/Main -lGLEW -lglfw -lGL -ldl -lm -lpthread -lX11"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compilador: g++ com todos os .cpp da pasta source"
+        }
+    ]
+}

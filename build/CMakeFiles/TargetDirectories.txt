@@ -1,0 +1,3 @@
+/home/ferpen/project/build/CMakeFiles/ogl.dir
+/home/ferpen/project/build/CMakeFiles/edit_cache.dir
+/home/ferpen/project/build/CMakeFiles/rebuild_cache.dir

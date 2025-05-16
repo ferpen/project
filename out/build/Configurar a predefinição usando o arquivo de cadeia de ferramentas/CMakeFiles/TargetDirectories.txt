@@ -1,0 +1,3 @@
+/home/ferpen/project/out/build/Configurar a predefinição usando o arquivo de cadeia de ferramentas/CMakeFiles/ogl.dir
+/home/ferpen/project/out/build/Configurar a predefinição usando o arquivo de cadeia de ferramentas/CMakeFiles/edit_cache.dir
+/home/ferpen/project/out/build/Configurar a predefinição usando o arquivo de cadeia de ferramentas/CMakeFiles/rebuild_cache.dir

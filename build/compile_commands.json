@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ferpen/project/build",
+  "command": "/usr/sbin/c++ -g -o CMakeFiles/ogl.dir/main.cpp.o -c /home/ferpen/project/main.cpp",
+  "file": "/home/ferpen/project/main.cpp",
+  "output": "CMakeFiles/ogl.dir/main.cpp.o"
+}
+]
