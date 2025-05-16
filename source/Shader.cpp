@@ -8,7 +8,7 @@ bool Shader::CreateShader(std::string VertexSourcePath,std::string FragmentSourc
     char infoLog[512];
 
     //cria o programa que está com os shaders
-    this->ID = glCreateProgram();
+    ID = glCreateProgram();
     
     //carrega o shader de vertices
     std::ifstream VertexSource(VertexSourcePath);
@@ -38,7 +38,7 @@ bool Shader::CreateShader(std::string VertexSourcePath,std::string FragmentSourc
     }
 
     //aplica o shader de vertice ao programa
-    glAttachShader(this->ID, vertexShader);
+    glAttachShader(ID, vertexShader);
 
     //deleta o shader utilizado
     glDeleteShader(vertexShader);
@@ -78,7 +78,7 @@ bool Shader::CreateShader(std::string VertexSourcePath,std::string FragmentSourc
     }
 
     //aplica o shader de fragmento ao programa
-    glAttachShader(this->ID, fragmentShader);
+    glAttachShader(ID, fragmentShader);
 
     //deleta o shader
     glDeleteShader(fragmentShader);
@@ -89,12 +89,12 @@ bool Shader::CreateShader(std::string VertexSourcePath,std::string FragmentSourc
         return false;
     }
 
-    glLinkProgram(this->ID);
+    glLinkProgram(ID);
 
     // confere o programa
-    glGetProgramiv(this->ID, GL_LINK_STATUS, &success);
+    glGetProgramiv(ID, GL_LINK_STATUS, &success);
     if (!success) {
-        glGetProgramInfoLog(this->ID, 512, NULL, infoLog);
+        glGetProgramInfoLog(ID, 512, NULL, infoLog);
         std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
         return false;
     }
@@ -103,7 +103,9 @@ bool Shader::CreateShader(std::string VertexSourcePath,std::string FragmentSourc
 }
 
 void Shader::Use(){
-    glUseProgram(this->ID);
+    glUseProgram(ID);
 }
 
-
+unsigned int Shader::getID(){
+    return ID;
+}

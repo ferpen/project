@@ -9,7 +9,7 @@ class Shader{
     public:
     bool CreateShader(std::string VertexSourcePath,std::string FragmentSourcePath);
     void Use();
-
+    unsigned int getID();
 };
 
 #endif

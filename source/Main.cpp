@@ -20,22 +20,22 @@ int main(int argc, char **argv) {
     	return 1;
 	}
 
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-
 	jogo.Init();
 
     while (!glfwWindowShouldClose(wnd.getID()))
     {
 	
-	//recebe os eventos da janela
-  	glfwPollEvents();
-
 	//limpa a tela
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
 	jogo.Render();
 
     glfwSwapBuffers(wnd.getID());
+
+
+	//recebe os eventos da janela
+  	glfwPollEvents();
 
     }
 
